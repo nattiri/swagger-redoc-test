@@ -4,7 +4,9 @@
   "description": "Redocの検証用",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && npm create",
+    "create":"npx redoc-cli bundle ./src/swagger.yaml --output ./out/index.html",
+    "clean": "rm -rf ./out/*"
   },
   "author": "nattiri",
   "license": "UNLICENSED",
